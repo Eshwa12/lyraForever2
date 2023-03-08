@@ -1,6 +1,6 @@
 package com.lyraForever2.step_definitions;
 
-import com.lyraForever2.pages.DiscussPage_DJ;
+import com.lyraForever2.pages.DiscussPage;
 import com.lyraForever2.pages.LoginPage;
 import com.lyraForever2.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
@@ -10,7 +10,7 @@ import org.junit.Assert;
 public class US13StepDefs {
 
     LoginPage loginPage = new LoginPage();
-    DiscussPage_DJ discussPage = new DiscussPage_DJ();
+    DiscussPage discussPage = new DiscussPage();
 
     @When("user login using {string} and {string}")
     public void user_login_using_and(String string, String string2) {
