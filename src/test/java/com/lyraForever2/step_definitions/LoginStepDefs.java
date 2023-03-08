@@ -51,7 +51,7 @@ public class LoginStepDefs {
     }
 */
 
-  /*  @Given("the user is on the login page with username and password")
+  /* @Given("the user is on the login page with username and password")
     public void theUserIsOnTheLoginPageWithUsernameAndPassword() {
         Driver.getDriver().get("https://qa.upgenix.net/web/login");
         loginPage.userName.sendKeys(ConfigurationReader.getProperty("PosManager_username"));

@@ -110,39 +110,7 @@ public class BasePage {
 
 
 
-    public static int mainModulesTitles() {
-        BasePage basePageModules = new BasePage();
-        List<WebElement> listOfMenuBar = basePageModules.mainModules;
-        List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
-        List<String> allModules = new ArrayList<>();
-        int count = -1;
-        for (String eachTitle : getListOfMenuBar) {
-            if (!eachTitle.equals("More ")) {
 
-                allModules.addAll(getListOfMenuBar);
-                count++;
-
-            }
-        }
-        return count ;
-
-
-    }
-
-    public static List<String> listMainModulesTitlesString() {
-        BasePage basePageModules = new BasePage();
-        List<WebElement> listOfMenuBar = basePageModules.mainModules;
-        List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
-        List<String> allModules = new ArrayList<>();
-        for (String eachTitle : getListOfMenuBar) {
-
-            allModules.addAll(getListOfMenuBar);
-        }
-
-        return allModules ;
-
-
-    }
     
 
 
