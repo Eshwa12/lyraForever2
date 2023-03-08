@@ -41,7 +41,7 @@ public class BasePage {
     public List<WebElement> repairColumnsPage;
 
     //US3 , US4 , US7 ,US8 , US9
-    @FindBy(xpath = "//ul[contains(@class,'oe_application_menu_placeholder')]//li")
+    @FindBy(xpath = "//ul[contains(@class,'oe_application_menu_placeholder')]//li//span")
     //div[@class='navbar-collapse collapse']
     //(//div[@class='navbar-collapse collapse']/ul//span) -->whole top manu bar all text + icons
     public List<WebElement> mainModules;
@@ -108,21 +108,42 @@ public class BasePage {
     public List<WebElement> timeList;
 
 
-    public static void mainModulesTitles() {
+
+
+    public static int mainModulesTitles() {
         BasePage basePageModules = new BasePage();
         List<WebElement> listOfMenuBar = basePageModules.mainModules;
         List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
         List<String> allModules = new ArrayList<>();
-
+        int count = -1;
         for (String eachTitle : getListOfMenuBar) {
-            if (!eachTitle.equals("More")) {
+            if (!eachTitle.equals("More ")) {
+
                 allModules.addAll(getListOfMenuBar);
+                count++;
 
             }
         }
+        return count ;
 
-        System.out.println(allModules.size());
+
     }
+
+    public static List<String> listMainModulesTitlesString() {
+        BasePage basePageModules = new BasePage();
+        List<WebElement> listOfMenuBar = basePageModules.mainModules;
+        List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
+        List<String> allModules = new ArrayList<>();
+        for (String eachTitle : getListOfMenuBar) {
+
+            allModules.addAll(getListOfMenuBar);
+        }
+
+        return allModules ;
+
+
+    }
+    
 
 
 }
