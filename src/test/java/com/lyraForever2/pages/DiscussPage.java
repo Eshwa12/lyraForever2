@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class DiscussPage {
+public class DiscussPage extends BasePage{
 
 // created by Desi for US13
     public DiscussPage(){

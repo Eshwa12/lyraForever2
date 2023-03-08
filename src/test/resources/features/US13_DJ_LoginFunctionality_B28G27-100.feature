@@ -1,9 +1,9 @@
 @B28G27-102
 Feature: Default
 
-	Background:
+	#Background:
 		#@B28G27-100
-		Given the user is on the login page
+	#	Given the user is on the login page
 		
 
 
