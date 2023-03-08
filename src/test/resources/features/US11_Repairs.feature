@@ -1,3 +1,5 @@
+@A1
+
 Feature: Default
 
   # US: As a  POS manager, I want to get repair order on the Repairs page.
