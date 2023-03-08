@@ -1,7 +1,7 @@
 package com.lyraForever2.step_definitions;
 
 import com.lyraForever2.pages.LoginPage;
-import com.lyraForever2.pages.SalesModule;
+import com.lyraForever2.pages.SalesPage;
 import com.lyraForever2.utilities.BrowserUtils;
 import com.lyraForever2.utilities.ConfigurationReader;
 import com.lyraForever2.utilities.Driver;
@@ -9,15 +9,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class US10StepDefs {
 
     LoginPage login = new LoginPage();
-    SalesModule salesModule = new SalesModule();
+    SalesPage salesPageBase = new SalesPage();
 
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
@@ -31,35 +27,27 @@ public class US10StepDefs {
 
     @And("user should click on Sales module")
     public void user_should_click_on_sales_module() {
-        salesModule.salesPage.click();
+        salesPageBase.salesPage.click();
     }
 
     @Then("user should see Quotations header")
     public void user_should_see_quotations_header() {
-        Assert.assertTrue(salesModule.quotationHeader.isDisplayed());
+       salesPageBase.quotationsHeader.isDisplayed();
     }
 
     @And("user should click on main Quotation Box")
     public void user_should_click_on_main_quotation_box() {
-        salesModule.quotationMainBox.click();
+        salesPageBase.quotationMainBox.click();
         BrowserUtils.sleep(2);
     }
 
     @Then("user should see all the checkboxes are selected")
     public void user_should_see_all_the_checkboxes_are_selected() {
-
-        //Assert.assertEquals(true, salesModule.quotationMainBox.isSelected());
-
-        List<WebElement> checkboxes = Driver.getDriver().findElements(By.xpath("//td[@class='o_list_record_selector']"));
-
-        for (WebElement each : checkboxes) {
-            Assert.assertEquals(true, each.isSelected());
-        }
-
-
-
-        }
+        salesPageBase.assertCheckboxesAreSelected();
     }
+
+
+}
 
 
 

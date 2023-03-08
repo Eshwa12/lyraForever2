@@ -1,10 +1,6 @@
 Feature: Sales Module Quotations checkbox
   Agile story: B28G27-91 - As POS & Sales manager, I want to manage quotations on the Sales page.
 
-  Background:
-		#@B28G27-100
-    Given the user is on the login page
-
 
 	#*US10* As POS & Sales manager, I want to manage quotations on the Sales page.
 	#
@@ -19,8 +15,8 @@ Feature: Sales Module Quotations checkbox
     Examples:
       | username                | password     |
       | posmanager6@info.com    | posmanager   |
-   #   | posmanager7@info.com    | posmanager   |
-    #  | posmanager8@info.com    | posmanager   |
-     # | salesmanager10@info.com | salesmanager |
-      #| salesmanager11@info.com | salesmanager |
-      #| salesmanager12@info.com | salesmanager |
+      | posmanager7@info.com    | posmanager   |
+      | posmanager8@info.com    | posmanager   |
+      | salesmanager10@info.com | salesmanager |
+      | salesmanager11@info.com | salesmanager |
+      | salesmanager12@info.com | salesmanager |
