@@ -18,8 +18,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BasePage {
-    public BasePage() {
+public abstract class BasePage {
+    public  BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -41,7 +41,7 @@ public class BasePage {
     public List<WebElement> repairColumnsPage;
 
     //US3 , US4 , US7 ,US8 , US9
-    @FindBy(xpath = "//ul[contains(@class,'oe_application_menu_placeholder')]//li")
+    @FindBy(xpath = "//ul[contains(@class,'oe_application_menu_placeholder')]//li//span")
     //div[@class='navbar-collapse collapse']
     //(//div[@class='navbar-collapse collapse']/ul//span) -->whole top manu bar all text + icons
     public List<WebElement> mainModules;
@@ -108,21 +108,10 @@ public class BasePage {
     public List<WebElement> timeList;
 
 
-    public static void mainModulesTitles() {
-        BasePage basePageModules = new BasePage();
-        List<WebElement> listOfMenuBar = basePageModules.mainModules;
-        List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
-        List<String> allModules = new ArrayList<>();
 
-        for (String eachTitle : getListOfMenuBar) {
-            if (!eachTitle.equals("More")) {
-                allModules.addAll(getListOfMenuBar);
 
-            }
-        }
 
-        System.out.println(allModules.size());
-    }
+    
 
 
 }
