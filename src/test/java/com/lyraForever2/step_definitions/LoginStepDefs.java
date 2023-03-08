@@ -5,8 +5,8 @@ import com.lyraForever2.pages.LoginPage;
 import com.lyraForever2.utilities.ConfigurationReader;
 import com.lyraForever2.utilities.Driver;
 import io.cucumber.java.en.Given;
-public class LoginStepDefs {
-    BasePage basePage = new BasePage();
+public class LoginStepDefs  {
+
     LoginPage loginPage = new LoginPage();
 
 
@@ -51,7 +51,7 @@ public class LoginStepDefs {
     }
 */
 
-  /*  @Given("the user is on the login page with username and password")
+  /* @Given("the user is on the login page with username and password")
     public void theUserIsOnTheLoginPageWithUsernameAndPassword() {
         Driver.getDriver().get("https://qa.upgenix.net/web/login");
         loginPage.userName.sendKeys(ConfigurationReader.getProperty("PosManager_username"));
