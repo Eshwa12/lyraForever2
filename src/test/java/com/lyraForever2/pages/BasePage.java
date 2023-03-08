@@ -18,8 +18,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BasePage {
-    public BasePage() {
+public abstract class BasePage {
+    public  BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

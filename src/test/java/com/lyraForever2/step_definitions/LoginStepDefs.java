@@ -5,8 +5,8 @@ import com.lyraForever2.pages.LoginPage;
 import com.lyraForever2.utilities.ConfigurationReader;
 import com.lyraForever2.utilities.Driver;
 import io.cucumber.java.en.Given;
-public class LoginStepDefs {
-    BasePage basePage = new BasePage();
+public class LoginStepDefs  {
+
     LoginPage loginPage = new LoginPage();
 
 

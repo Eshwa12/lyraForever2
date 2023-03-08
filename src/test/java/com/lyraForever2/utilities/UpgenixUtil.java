@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UpgenixUtil {
+public class UpgenixUtil extends BasePage{
     public static int mainModulesTitles() {
-        BasePage basePageModules = new BasePage();
+        UpgenixUtil basePageModules = new UpgenixUtil();
         List<WebElement> listOfMenuBar = basePageModules.mainModules;
         List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
         List<String> allModules = new ArrayList<>();
@@ -26,7 +26,7 @@ public class UpgenixUtil {
     }
 
     public static List<String> listMainModulesTitlesString() {
-        BasePage basePageModules = new BasePage();
+        UpgenixUtil basePageModules = new UpgenixUtil();
         List<WebElement> listOfMenuBar = basePageModules.mainModules;
         List<String> getListOfMenuBar = BrowserUtils.getElementsText(listOfMenuBar);
         List<String> allModules = new ArrayList<>();
