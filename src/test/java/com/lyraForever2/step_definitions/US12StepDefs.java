@@ -9,11 +9,8 @@ import org.junit.Assert;
 
 public class US12StepDefs {
     LoginPage loginPage = new LoginPage();
-    @Given("POS managers and eventCRM manager are on the login page of the upgenix application")
-    public void pos_managers_and_event_crm_manager_are_on_the_login_page_of_the_upgenix_application() {
-        Driver.getDriver().get("https://qa.upgenix.net/web/login");
-    }
-    @When("User enters {string} and {string}")
+
+    @Given("User enters {string} and {string}")
     public void user_enters_and(String username, String password) {
         loginPage.userName.sendKeys(username);
         loginPage.password.sendKeys(password);

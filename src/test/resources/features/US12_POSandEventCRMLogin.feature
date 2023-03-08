@@ -1,10 +1,11 @@
+@B28G27-99
 Feature: Login as POS and eventCRM manager with valid credential
 
 
   @B28G27-98
   Scenario Outline: US12AC01TC01- Verify POS and eventCRM managers login successful and the account holder name should be correct.
-    Given POS managers and eventCRM manager are on the login page of the upgenix application
-    When  User enters "<username>" and "<password>"
+
+    Given  User enters "<username>" and "<password>"
     And   User click on login button
     Then  User should be in main page
 
