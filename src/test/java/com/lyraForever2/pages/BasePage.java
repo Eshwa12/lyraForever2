@@ -50,17 +50,7 @@ public abstract class BasePage {
     //US5
     @FindBy(xpath = "(//span[normalize-space()='Point of Sale'])[1]")
     public WebElement pointOfSalesPage;
-    @FindBy(xpath = "(//span[normalize-space()='Orders'])[3]")
-    public WebElement ordersButton;
-    @FindBy(xpath = "//th[@class='o_list_record_selector']//input[@type='checkbox']")
-    public WebElement orderRefCheckBox;
-    @FindBy(xpath = "//button[normalize-space()='Action']")
-    public WebElement actionButton;
 
-    @FindBy(xpath = "(//ul[@class='dropdown-menu'])[4]//li")
-    public List<WebElement> actionSubMenu;
-    @FindBy(xpath = "//table//input")
-    public List<WebElement> allCheckBoxOrderSelected;
 
 
     //U6
