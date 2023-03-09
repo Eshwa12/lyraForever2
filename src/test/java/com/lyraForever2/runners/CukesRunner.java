@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/lyraForever2/step_definitions",
-        dryRun = false,
-        tags = "",
+        dryRun = true,
+        tags = "@B28G27-110",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
