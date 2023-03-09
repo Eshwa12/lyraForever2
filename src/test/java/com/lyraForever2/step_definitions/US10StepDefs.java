@@ -15,13 +15,16 @@ public class US10StepDefs {
     LoginPage login = new LoginPage();
     SalesPage salesPageBase = new SalesPage();
 
-    @Given("the user is on the login page")
+   /* @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+
     }
+
+    */
 
     @Then("user insert {string} and {string}")
     public void user_insert_and(String username, String password) {
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         login.login(username, password);
     }
 
