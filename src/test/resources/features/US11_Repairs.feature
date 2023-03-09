@@ -14,6 +14,7 @@ Feature: Default
     Given the user is logged in as the POS manager
     Then user clicks on Repairs module
     And user is able to see Repair Orders
+    Then user selected the check box Repair Reference
     Then user is able to select all repair orders by clicking the checkbox
 
 
@@ -25,4 +26,5 @@ Feature: Default
     Given the user is logged in as the Sales Manager
     Then user clicks on Repairs module
     And user is able to see Repair Orders
+    Then user selected the check box Repair Reference
     Then user is able to select all repair orders by clicking the checkbox
