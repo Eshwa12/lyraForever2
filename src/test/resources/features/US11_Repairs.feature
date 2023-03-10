@@ -23,7 +23,7 @@ Feature: Default
 
   @B28G27-124
   Scenario: US11AC1TC2 - As a user, Sales Manager wants to get repair order on the Repairs page.
-    Given the user is logged in as the Sales Manager
+    Given the user is logged in as the Sales manager
     Then user clicks on Repairs module
     And user is able to see Repair Orders
     Then user selected the check box Repair Reference
