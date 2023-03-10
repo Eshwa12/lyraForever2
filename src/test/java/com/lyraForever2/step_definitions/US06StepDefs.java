@@ -41,33 +41,39 @@ public class US06StepDefs extends DocumentationPage{
 
     @Then("User has to  verify the Odoo Documentation massage is displayed")
     public void user_has_to_verify_the_odoo_documentation_massage_is_displayed() {
-
-
-    }
-    public void windowHandlingTest(){
-
-        String currentWindowHandle=Driver.getDriver().getWindowHandle();
-
-        Set<String> allWindows=Driver.getDriver().getWindowHandles();
-
-
-        for (String eachWindow: allWindows) {
-            Driver.getDriver().switchTo().window(eachWindow);
-            if(eachWindow.contains("Documentation")){
-                Driver.getDriver().switchTo().window(eachWindow);
-            }
-
-        }
-
-
-
+        BrowserUtils.switchToWindow("Odoo Documentation — Odoo 16.0 documentation");
 
         String expectedResult = "Odoo Documentation";
         String actualResult = Driver.getDriver().findElement(By.xpath("//h1[@class='text-white']")).getText();
 
-        Assert.assertEquals(actualResult,expectedResult);
+        Assert.assertEquals(actualResult, expectedResult);
 
+       /* public void windowHandlingTest(){
+
+            String currentWindowHandle = Driver.getDriver().getWindowHandle();
+
+            Set<String> allWindows = Driver.getDriver().getWindowHandles();
+
+
+            for (String eachWindow : allWindows) {
+                Driver.getDriver().switchTo().window(eachWindow);
+                if (eachWindow.contains("Documentation")) {
+                    Driver.getDriver().switchTo().window(eachWindow);
+                }
+
+            }
+
+
+            String expectedResult = "Odoo Documentation";
+            String actualResult = Driver.getDriver().findElement(By.xpath("//h1[@class='text-white']")).getText();
+
+            Assert.assertEquals(actualResult, expectedResult);
+
+        } */
     }
+
+
+
 
     @Then("User has to verify four main Document topics are listed")
     public void userHasToVerifyMainDocumentTopicsAreListed(List<String> expectedResult) {
