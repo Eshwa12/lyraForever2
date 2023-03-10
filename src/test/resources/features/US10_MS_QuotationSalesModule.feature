@@ -1,3 +1,4 @@
+@wip
 Feature: Sales Module Quotations checkbox
   Agile story: B28G27-91 - As POS & Sales manager, I want to manage quotations on the Sales page.
 

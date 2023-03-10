@@ -1,3 +1,4 @@
+@wip
 @B28G27-99
 Feature: Login as POS and eventCRM manager with valid credential
 
