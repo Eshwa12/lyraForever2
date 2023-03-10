@@ -1,5 +1,4 @@
-@A1
-@@B28G27-125
+@B28G27-125
 Feature: Default
 
   # US: As a  POS manager, I want to get repair order on the Repairs page.
