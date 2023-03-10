@@ -18,7 +18,6 @@ public class US11StepDefs{
     LoginPage loginPage = new LoginPage();
     RepairPage repairPage = new RepairPage();
 
-
     @Given("the user is logged in as the POS manager")
     public void the_user_is_logged_in_as_the_pos_manager() {
         loginPage.login(ConfigurationReader.getProperty("PosManager_username"),
@@ -26,12 +25,11 @@ public class US11StepDefs{
 
     }
 
-    @Given("the user is logged in as the Sales Manager")
+    @Given("the user is logged in as the Sales manager")
     public void the_user_is_logged_in_as_the_sales_manager() {
         loginPage.login(ConfigurationReader.getProperty("SalesManager_username"),
                 ConfigurationReader.getProperty("SalesManager_password"));
     }
-
 
     @When("user clicks on Repairs module")
     public void user_clicks_on_repairs_module() {
