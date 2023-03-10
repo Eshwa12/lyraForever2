@@ -1,4 +1,3 @@
-@A1
 
 Feature: Default
 
