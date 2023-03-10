@@ -40,4 +40,26 @@ public class UpgenixUtil extends BasePage{
 
     }
 
+    /**
+     * Method to return/confirm the number of Quotations/Names for columns under the Sales Module
+     * @return
+     */
+
+    public static int salesColumns() {
+        UpgenixUtil basePageModules = new UpgenixUtil();
+        List<WebElement> listOfColumns = basePageModules.quotationsColumnsPage;
+        List<String> getListOfColumns = BrowserUtils.getElementsText(listOfColumns);
+        List<String> allColumns = new ArrayList<>();
+        int count = 0;
+        for (String eachTitle : getListOfColumns) {
+
+            allColumns.addAll(getListOfColumns);
+            count++;
+
+
+        }
+        return count;
+
+    }
+
 }
