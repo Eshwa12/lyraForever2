@@ -48,7 +48,7 @@ public class US06StepDefs extends DocumentationPage{
 
         Assert.assertEquals(actualResult, expectedResult);
 
-       /* public void windowHandlingTest(){
+       /* public void windowHandlingTest(){ vvvv
 
             String currentWindowHandle = Driver.getDriver().getWindowHandle();
 
