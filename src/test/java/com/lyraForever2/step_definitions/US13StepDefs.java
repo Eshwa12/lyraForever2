@@ -21,7 +21,8 @@ public class US13StepDefs {
     @Then("account holder name should be {string}")
     public void account_holder_name_should_be(String string) {
 
-        BrowserUtils.sleep(3);
+       // BrowserUtils.sleep(3);
+        BrowserUtils.waitForTitleContains("Odoo");
 
         String actual = discussPage.profileName.getText();
         Assert.assertTrue(discussPage.profileName.getText().equalsIgnoreCase(string) );

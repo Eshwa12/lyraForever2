@@ -20,7 +20,7 @@ Feature: Default
 		      | salesmanager55@info.com | salesmanager | salesmanager55 |
 		      | salesmanager67@info.com | salesmanager | salesmanager67 |
 		      | salesmanager89@info.com | salesmanager | salesmanager89 |
-		
+
 		    @expensesManager
 		    Examples:
 		      | email                      | password        | name              |
